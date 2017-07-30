@@ -70,8 +70,8 @@ export default {
         const largestHeight = window.innerHeight - scrollHeight - 25;
         const largestWidth = window.innerWidth - scrollWidth - 25;
 
-        if (this.ctxTop > largestHeight) this.ctxTop = largestHeight;
-        if (this.ctxLeft > largestWidth) this.ctxLeft = largestWidth;
+        if (this.ctxTop > largestHeight) this.ctxTop = this.ctxTop - scrollHeight;
+        if (this.ctxLeft > largestWidth) this.ctxLeft = this.ctxLeft - scrollWidth;
       })
       return e
     },
